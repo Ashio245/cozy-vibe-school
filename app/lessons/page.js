@@ -25,7 +25,7 @@ export default function LessonsIndex() {
         <div style={{ maxWidth: "650px", margin: "0 auto", textAlign: "left" }}>
           <ReAnchor 
             title="A Quick Beginner Guide"
-            message="We recommend starting with Lesson 0 and Lesson 1. They are Concept lessons and don't require opening any tools or signing in. Once you are comfortable, proceed to the Tool lessons to build your apps!"
+            message="We recommend starting with Lesson 0 and Lesson 1 (Concept lessons). Once comfortable, proceed to the Tool lessons to build your apps, and finally finish with our Advanced section to master prompting and safety."
           />
         </div>
       </div>
@@ -49,6 +49,12 @@ export default function LessonsIndex() {
           onClick={() => setFilter("tool")}
         >
           🛠️ Tool Building
+        </button>
+        <button
+          className={`filter-btn ${filter === "advanced" ? "active" : ""}`}
+          onClick={() => setFilter("advanced")}
+        >
+          🎯 Advanced Skills
         </button>
       </div>
 

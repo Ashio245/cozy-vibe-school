@@ -11,6 +11,9 @@ import VibeTextArea from "@/components/VibeTextArea";
 import StepCard from "@/components/StepCard";
 import DashboardMockup from "@/components/DashboardMockup";
 import WorkspaceMockup from "@/components/WorkspaceMockup";
+import PromptPolish from "@/components/PromptPolish";
+import AiQuiz from "@/components/AiQuiz";
+import SafetyChecklist from "@/components/SafetyChecklist";
 
 export default function LessonPage() {
   const params = useParams();
@@ -31,6 +34,7 @@ export default function LessonPage() {
 
   const isCompleted = completedLessons.includes(lesson.slug);
   const isConcept = lesson.category === "concept";
+  const isAdvanced = lesson.category === "advanced";
 
   const handleToggleComplete = () => {
     if (isCompleted) {
@@ -47,8 +51,8 @@ export default function LessonPage() {
         <Link href="/lessons" style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "0.95rem", fontWeight: 500 }}>
           ← Back to all lessons
         </Link>
-        <span className={`badge ${isConcept ? "badge-concept" : "badge-tool"}`}>
-          {isConcept ? "💡 Concept Lesson" : "🛠️ Tool Lesson"}
+        <span className={`badge ${isConcept ? "badge-concept" : isAdvanced ? "badge-advanced" : "badge-tool"}`}>
+          {isConcept ? "💡 Concept Lesson" : isAdvanced ? "🎯 Advanced Lesson" : "🛠️ Tool Lesson"}
         </span>
       </div>
 
@@ -84,9 +88,20 @@ export default function LessonPage() {
             )}
           </div>
         ))}
+
+        {/* Dynamic interactive components for Advanced Phase */}
+        {lesson.interactiveType === "prompt-polish" && (
+          <PromptPolish />
+        )}
+        {lesson.interactiveType === "ai-quiz" && (
+          <AiQuiz />
+        )}
+        {lesson.interactiveType === "checklist" && (
+          <SafetyChecklist />
+        )}
       </div>
 
-      {!isConcept && (
+      {lesson.category === "tool" && (
         <div style={{ marginTop: "40px", padding: "32px", backgroundColor: "rgba(139, 92, 246, 0.02)", borderRadius: "20px", border: "1px solid rgba(139, 92, 246, 0.08)" }}>
           <h2 style={{ marginTop: 0, marginBottom: "24px", color: "var(--color-lavender)", fontSize: "1.5rem" }}>
             🛠️ Interactive Sandbox Guide
@@ -130,6 +145,8 @@ export default function LessonPage() {
         title="Stay Cozy!"
         message={isConcept 
           ? "There is no pressure to download developer programs. We are simply understanding how AI translates human language into structures." 
+          : isAdvanced
+          ? "Advanced vibe coding is all about planning, asking questions, and checking your results. Keep safe and take it one step at a time."
           : "If the app looks slightly different from what you wanted, don't worry! Chat with the builder like a human. Say 'Make the title bigger' or 'Change background to warm peach'."
         }
       />

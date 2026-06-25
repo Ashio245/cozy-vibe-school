@@ -2,12 +2,13 @@ import Link from "next/link";
 
 export default function LessonCard({ lesson }) {
   const isConcept = lesson.category === "concept";
+  const isAdvanced = lesson.category === "advanced";
 
   return (
     <div className="card" style={{ display: "flex", flexDirection: "column", height: "100%" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
-        <span className={`badge ${isConcept ? "badge-concept" : "badge-tool"}`}>
-          {isConcept ? "💡 Concept Lesson" : "🛠️ Tool Lesson"}
+        <span className={`badge ${isConcept ? "badge-concept" : isAdvanced ? "badge-advanced" : "badge-tool"}`}>
+          {isConcept ? "💡 Concept Lesson" : isAdvanced ? "🎯 Advanced Lesson" : "🛠️ Tool Lesson"}
         </span>
         <span className="badge badge-beginner">
           {lesson.difficulty || "Beginner"}

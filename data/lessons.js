@@ -141,7 +141,7 @@ export const lessons = [
     difficulty: "Intermediate",
     estimatedMinutes: 15,
     prompt: "Create a web app for tracking house plants called 'Leafy Log'. It should have a soft warm white background, a nice header, a section to input a plant name and click 'Add Plant', and a list showing the added plants. Each plant in the list should have a 'Watered Today' button which shows a tiny checkmark and green text when clicked. Add some friendly message if there are no plants yet.",
-    nextSlug: null,
+    nextSlug: "lesson-6-the-art-of-good-prompts",
     introText: "Congratulations on reaching the final lesson! You are ready to build a tracking application from scratch.",
     sections: [
       {
@@ -149,6 +149,131 @@ export const lessons = [
         paragraphs: [
           "In this final lesson, you will build a plant tracking app. In your Antigravity IDE, open a brand new empty folder on your computer named `leafy-log` and paste this graduation prompt in the chat.",
           "You'll create an interactive database-like tracker for watering house plants. Once the builder is finished, test it out and feel free to ask for extra tweaks like dark mode!"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "lesson-6-the-art-of-good-prompts",
+    title: "Lesson 6: The Art of Good Prompts",
+    description: "Learn how to write clear, effective vibe prompts using our 3-part formula.",
+    category: "advanced",
+    order: 6,
+    difficulty: "Advanced",
+    estimatedMinutes: 10,
+    prompt: null,
+    nextSlug: "lesson-7-guardrails",
+    introText: "Now that you've built a few apps with Antigravity, let's learn how to level up your vibe prompts. The words you choose make a huge difference in the final code.",
+    interactiveType: "prompt-polish",
+    sections: [
+      {
+        title: "Why Prompt Quality Matters",
+        paragraphs: [
+          "When vibe coding, the AI builder reads your prompt exactly like a chef reads a recipe. If you write: 'Make a coffee app,' the AI has to guess everything else. It might give you a site for a cafe, a recipe blog, or a bean inventory tracker.",
+          "To get exactly what you want, you should be descriptive and structured. A great vibe prompt doesn't need computer code or jargon. It just needs clarity, layout styling instructions, and simple behavioral details."
+        ]
+      },
+      {
+        title: "The 3-Part Prompt Formula",
+        paragraphs: [
+          "A professional vibe prompt usually contains three parts:",
+          "1. Role & Purpose: What is this app? (e.g. 'A simple study timer for students')",
+          "2. Visual Design: How does it look? Be specific about colors, fonts, and spacing. (e.g. 'Use a warm cream background, soft brown text, and cozy rounded boxes')",
+          "3. Interactivity & Logic: What happens when the user clicks or types? (e.g. 'When I click Start, a 25-minute timer should count down in minutes and seconds, showing a checkmark when done.')"
+        ]
+      },
+      {
+        title: "Try It: The 'Prompt Polish' Exercise",
+        paragraphs: [
+          "Let's practice! Below is a weak prompt that a beginner might write. In the text area, try rewriting it using our 3-part formula to make it clearer and more descriptive, then click 'Reveal Polish' to see how we'd improve it."
+        ]
+      }
+    ]
+  },
+  {
+    slug: "lesson-7-guardrails",
+    title: "Lesson 7: Guardrails & Limitations",
+    description: "Understand what AI can and cannot build, and how to recover when it gets stuck.",
+    category: "advanced",
+    order: 7,
+    difficulty: "Advanced",
+    estimatedMinutes: 8,
+    prompt: null,
+    nextSlug: "lesson-8-safety-and-risks",
+    introText: "AI is incredibly capable, but it is not magic. Knowing its limitations will save you hours of confusion.",
+    interactiveType: "ai-quiz",
+    sections: [
+      {
+        title: "What AI Does Well",
+        paragraphs: [
+          "Modern AI builders like Antigravity excel at standard web tasks. They are great at creating layouts, styling with CSS, setting up simple interactive buttons, and making forms (like inputting a name to add a plant).",
+          "If you ask for common website structures, tools, or games, the AI will usually build them beautifully in a single try."
+        ]
+      },
+      {
+        title: "Where AI Struggles",
+        paragraphs: [
+          "AI builders start to struggle when you ask for:",
+          "• Extremely large features all at once (e.g. 'Build a complete Facebook clone')",
+          "• Precise custom animations or exact pixel-perfect matches without detailed descriptions",
+          "• Heavy server-side logic like secure credit card transactions or live multi-player databases",
+          "• Conflicting instructions (e.g. asking for a 'dark minimalist layout' and then a 'bright, colorful, complex dashboard' in the same prompt)"
+        ]
+      },
+      {
+        title: "How to Recover When it Gets Stuck",
+        paragraphs: [
+          "If Antigravity writes code that breaks or displays error messages, don't panic! Here's how to recover:",
+          "1. Ask the Chat: Simply copy the error message or describe what's wrong (e.g. 'The delete button doesn't work when clicked, please fix it'). The assistant will rewrite the code to correct it.",
+          "2. Break it Down: Instead of asking for 5 features, ask for 1 at a time. Let it build, verify it works, then ask for the next.",
+          "3. Use Git: Antigravity works on files on your computer. You can use version control to discard changes if a prompt goes completely wrong."
+        ]
+      },
+      {
+        title: "Test Your Knowledge",
+        paragraphs: [
+          "Let's see if you can spot which tasks are easy for an AI builder and which ones are tricky or need extra care. Read each scenario below and make your guess!"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "lesson-8-safety-and-risks",
+    title: "Lesson 8: Stay Safe — Risks & Precautions",
+    description: "Learn vital safety habits for vibe coding, including API key hygiene and security basics.",
+    category: "advanced",
+    order: 8,
+    difficulty: "Advanced",
+    estimatedMinutes: 8,
+    prompt: null,
+    nextSlug: null,
+    introText: "Building apps with AI is fast and fun, but it comes with responsibilities. Let's cover key safety guidelines.",
+    interactiveType: "checklist",
+    sections: [
+      {
+        title: "You are the Captain",
+        paragraphs: [
+          "When you build an app using vibe coding, the AI writes the code, but *you* are the owner. If the app has security flaws or breaks for a user, you are responsible. Because AI writes code by predicting patterns, it can sometimes introduce outdated libraries or security gaps.",
+          "Always test your app carefully. Click every button, fill every form, and double-check that the behavior matches your expectations."
+        ]
+      },
+      {
+        title: "Never Share Secrets",
+        paragraphs: [
+          "This is the golden rule of software safety: **Never put private keys, passwords, or API credentials into your prompts.**",
+          "If you are building an app that talks to a weather service or OpenAI, the AI assistant might ask for an 'API Key'. If you paste that key directly into your prompt, it might get written into files that are visible to the public. Instead, ask the assistant: 'How do I use environment variables (.env) to keep my keys safe?'"
+        ]
+      },
+      {
+        title: "Be Wary of 'Hallucinations'",
+        paragraphs: [
+          "Sometimes an AI builder will tell you: 'I have added payment support' or 'I secured the login page.' However, the code behind it might just be a mockup that looks correct but doesn't actually secure anything. Always verify by asking questions like: 'Is this login page actually hashing passwords, or is it just a prototype?'"
+        ]
+      },
+      {
+        title: "Your Vibe Coding Safety Pledge",
+        paragraphs: [
+          "Before graduating, check off the key security and caution practices below to show you're ready to build safe, secure applications in the real world!"
         ]
       }
     ]

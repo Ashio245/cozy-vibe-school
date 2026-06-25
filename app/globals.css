@@ -346,6 +346,11 @@ p {
   color: var(--color-lavender);
 }
 
+.badge-advanced {
+  background-color: #fbf3f0;
+  color: var(--color-terracotta);
+}
+
 .badge-beginner {
   background-color: #e0f2fe;
   color: #0284c7;

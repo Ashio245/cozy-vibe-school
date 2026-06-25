@@ -15,9 +15,10 @@ export default function LearningPath() {
   const completedCount = isLoaded ? completedLessons.filter(slug => lessons.some(l => l.slug === slug)).length : 0;
   const progressPercent = lessons.length > 0 ? Math.round((completedCount / lessons.length) * 100) : 0;
 
-  // Split lessons into Concept Phase and Tool Phase
+  // Split lessons into Concept Phase, Tool Phase, and Advanced Phase
   const conceptLessons = lessons.filter(l => l.category === "concept");
   const toolLessons = lessons.filter(l => l.category === "tool");
+  const advancedLessons = lessons.filter(l => l.category === "advanced");
 
   return (
     <div className="container fade-in" style={{ padding: "60px 24px" }}>
@@ -148,6 +149,56 @@ export default function LearningPath() {
                       <span style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>🕒 {lesson.estimatedMinutes} mins</span>
                       {isLocked ? (
                         <span style={{ fontSize: "0.8rem", fontStyle: "italic", color: "var(--color-amber)" }}>Complete Phase 1 first</span>
+                      ) : (
+                        <Link href={`/lessons/${lesson.slug}`} className="btn btn-primary" style={{ padding: "6px 14px", fontSize: "0.8rem" }}>
+                          {status === "complete" ? "Review" : "Start"}
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Phase 3: Advanced Skills */}
+        <div style={{ marginTop: "40px" }}>
+          <div style={{ 
+            display: "flex", 
+            alignItems: "center", 
+            gap: "12px", 
+            paddingBottom: "12px", 
+            borderBottom: "2px solid rgba(194, 65, 12, 0.2)",
+            marginBottom: "24px"
+          }}>
+            <span style={{ fontSize: "1.5rem" }}>🎯</span>
+            <div>
+              <h2 style={{ margin: 0, fontSize: "1.4rem" }}>Phase 3: Advanced Vibe Coding</h2>
+              <p style={{ margin: 0, fontSize: "0.9rem", color: "var(--text-muted)" }}>Master prompting formulas, guardrails, and key safety precautions.</p>
+            </div>
+          </div>
+
+          <div className="timeline" style={{ marginTop: 0 }}>
+            {advancedLessons.map((lesson) => {
+              const status = getStatus(lesson.slug);
+              // Advanced phase is locked until Phase 1 & 2 are complete
+              const isLocked = completedCount < (conceptLessons.length + toolLessons.length);
+              return (
+                <div key={lesson.slug} className={`timeline-item ${status === "complete" ? "complete" : isLocked ? "" : "active"}`}>
+                  <div className="timeline-dot" style={{ opacity: isLocked ? 0.6 : 1 }}>
+                    {status === "complete" ? "✓" : isLocked ? "🔒" : lesson.order}
+                  </div>
+                  <div className="timeline-card" style={{ opacity: isLocked ? 0.75 : 1 }}>
+                    <div className="timeline-header">
+                      <h3 style={{ margin: 0, fontSize: "1.15rem" }}>{lesson.title}</h3>
+                      <span className="badge badge-advanced" style={{ fontSize: "0.7rem", padding: "2px 8px" }}>Advanced</span>
+                    </div>
+                    <p style={{ fontSize: "0.9rem", marginBottom: "12px" }}>{lesson.description}</p>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <span style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>🕒 {lesson.estimatedMinutes} mins</span>
+                      {isLocked ? (
+                        <span style={{ fontSize: "0.8rem", fontStyle: "italic", color: "var(--color-terracotta)" }}>Complete Phase 2 first</span>
                       ) : (
                         <Link href={`/lessons/${lesson.slug}`} className="btn btn-primary" style={{ padding: "6px 14px", fontSize: "0.8rem" }}>
                           {status === "complete" ? "Review" : "Start"}

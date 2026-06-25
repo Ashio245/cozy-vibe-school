@@ -93,6 +93,14 @@ export default function Home() {
                 <p style={{ margin: "4px 0 0 0", fontSize: "0.95rem" }}>Use our simple prompt catalog to build websites, notes apps, and games with one click, then edit them by chatting.</p>
               </div>
             </div>
+
+            <div style={{ display: "flex", gap: "16px", alignItems: "flex-start", padding: "20px", background: "white", borderRadius: "12px", border: "1px solid rgba(78, 110, 88, 0.05)" }}>
+              <div style={{ width: "32px", height: "32px", borderRadius: "50%", background: "#fbf3f0", color: "var(--color-terracotta)", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "bold", flexShrink: 0 }}>4</div>
+              <div>
+                <h4 style={{ margin: 0, color: "var(--text-primary)" }}>Learn the Guardrails & Risks</h4>
+                <p style={{ margin: "4px 0 0 0", fontSize: "0.95rem" }}>Understand what AI can and cannot do, learn prompt formulation tips, and checklist safety hygiene guidelines before you deploy.</p>
+              </div>
+            </div>
           </div>
 
           <div style={{ marginTop: "40px" }}>
