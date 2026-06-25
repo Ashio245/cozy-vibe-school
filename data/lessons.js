@@ -43,7 +43,8 @@ export const lessons = [
         title: "What is Antigravity?",
         paragraphs: [
           "Antigravity is a special AI-powered IDE (Integrated Development Environment) created by Google. In fact, it is the very application you are using to view this school page right now! Instead of showing you a blank screen and thousands of lines of code, it provides a file tree on the left, an open code editor in the center, and a friendly Agent chat panel on the right.",
-          "You talk to it just like a chat application. When you ask it to change something, you can watch it write code files on your computer and update the browser preview instantly."
+          "You talk to it just like a chat application. When you ask it to change something, you can watch it write code files on your computer and update the browser preview instantly.",
+          "⚠️ **Disclaimer:** We only use Antigravity as an introduction in this school because it is free, easy to use, and requires zero initial setup. However, it tends to rate limit quickly under heavy usage. You are welcome to use other AI coding tools if you already know them, but for this intro, Antigravity is the recommended starting point."
         ]
       },
       {
@@ -295,7 +296,8 @@ export const lessons = [
         title: "Why is there a Limit?",
         paragraphs: [
           "When you type a prompt in Antigravity, a large AI model reads your description, updates several files, and compiles the project. This process takes a massive amount of computing power.",
-          "To keep the service fast, reliable, and completely free for everyone, Google has hourly and daily limit safety valves (known as 'Rate Limits' or 'Quotas')."
+          "To keep the service fast, reliable, and completely free for everyone, Google has hourly and daily limit safety valves (known as 'Rate Limits' or 'Quotas').",
+          "⚠️ **Important Note:** Antigravity is primarily used in this school as an introductory tool because it is free and has zero setup. Because of this, it is subject to strict rate limits and can run out of credits quickly. While we recommend Antigravity to get started, you can transition to other developer tools if you are familiar with alternatives."
         ]
       },
       {

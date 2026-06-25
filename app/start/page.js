@@ -41,6 +41,16 @@ export default function StartFromZero() {
               You type in descriptions, and Antigravity edits files on your computer and updates the live preview for you automatically. You never need to deal with files, templates, or coding commands.
             </p>
 
+            <div className="reanchor-box" style={{ marginTop: "24px", border: "1px solid rgba(217, 119, 6, 0.2)", backgroundColor: "#fffefb" }}>
+              <div className="reanchor-icon" style={{ fontSize: "1.2rem" }}>⚠️</div>
+              <div>
+                <h4 style={{ margin: "0 0 4px 0", color: "var(--color-amber)", fontSize: "0.95rem" }}>A Quick Disclaimer on Antigravity</h4>
+                <p style={{ margin: 0, fontSize: "0.88rem", color: "var(--text-muted)", lineHeight: "1.5" }}>
+                  We use Antigravity as our primary tool for this school because it is free, easy to use, and gets you coding immediately without any complex installation. However, because it is free, it tends to rate limit quickly during heavy prompting sessions. You are welcome to use other AI coding tools if you already know them, but for this course we use Antigravity as the default.
+                </p>
+              </div>
+            </div>
+
             {/* Real screenshot of Antigravity 2.0 */}
             <div style={{ marginTop: "20px", borderRadius: "12px", overflow: "hidden", border: "1px solid rgba(78, 110, 88, 0.12)", boxShadow: "0 4px 16px rgba(0,0,0,0.06)" }}>
               <Image

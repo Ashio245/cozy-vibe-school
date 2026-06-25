@@ -151,6 +151,9 @@ export default function CooldownSimulator() {
           <p style={{ margin: "0 0 16px 0", fontSize: "0.9rem", color: "var(--text-muted)", lineHeight: "1.5" }}>
             You've run out of credits. In the real Antigravity editor, there is <strong>no payment required</strong> when this happens. The service is free and simply needs to pace itself. All you have to do is <strong>just wait</strong> for your credits to automatically recharge.
           </p>
+          <p style={{ margin: "0", fontSize: "0.85rem", color: "var(--text-muted)", fontStyle: "italic", borderTop: "1px solid rgba(217, 119, 6, 0.15)", paddingTop: "12px" }}>
+            *Note: We default to Antigravity because it's free and simple for beginners. Because of this, it rate limits fast. Feel free to use alternative tools if you are familiar with them!
+          </p>
 
           {isSteeping ? (
             <div>

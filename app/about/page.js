@@ -13,7 +13,7 @@ export default function AboutPage() {
     },
     {
       q: "What exactly is Antigravity?",
-      a: "Antigravity is the AI-powered IDE (Integrated Development Environment) you are currently using to view this school page. In it, you chat with helpful AI assistants. You tell the assistant what you want, and it builds the code, compiles the files in your selected folder, and displays a live preview of the working application right next to your chat panel."
+      a: "Antigravity is the AI-powered IDE (Integrated Development Environment) you are currently using to view this school page. In it, you chat with helpful AI assistants. We use it as our introductory tool because it is free and requires zero setup, though it tends to rate limit quickly under heavy usage. You are welcome to use other AI coding tools if you know them, but Antigravity is the recommended starting point for this course."
     },
     {
       q: "Is vibe coding safe for absolute beginners?",
