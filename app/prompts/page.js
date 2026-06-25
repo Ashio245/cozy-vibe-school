@@ -16,6 +16,42 @@ export default function PromptsLibrary() {
     return matchesCategory && matchesSearch;
   });
 
+  const simplePrompts = filteredPrompts.filter(p => p.difficulty === "Beginner");
+  const advancedPrompts = filteredPrompts.filter(p => p.difficulty === "Intermediate" || p.difficulty === "Advanced");
+
+  const renderPromptCard = (p, idx) => (
+    <div key={idx} style={{ 
+      background: "white", 
+      padding: "24px", 
+      borderRadius: "var(--radius-lg)", 
+      border: "1px solid rgba(78, 110, 88, 0.08)",
+      boxShadow: "var(--shadow-sm)"
+    }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px" }}>
+        <div>
+          <h3 style={{ margin: 0, fontSize: "1.2rem" }}>{p.title}</h3>
+          <p style={{ margin: "4px 0 0 0", fontSize: "0.92rem", color: "var(--text-muted)" }}>{p.description}</p>
+        </div>
+        <div style={{ display: "flex", gap: "8px" }}>
+          <span className={`badge ${
+            p.difficulty === "Beginner" 
+              ? "badge-beginner" 
+              : p.difficulty === "Advanced" 
+              ? "badge-advanced" 
+              : "badge-tool"
+          }`} style={{ fontSize: "0.7rem" }}>
+            {p.difficulty}
+          </span>
+          <span className="badge badge-tool" style={{ fontSize: "0.7rem", backgroundColor: "rgba(78, 110, 88, 0.05)", color: "var(--color-sage)" }}>
+            {p.category}
+          </span>
+        </div>
+      </div>
+      
+      <PromptBlock promptText={p.promptText} label="Prompt Description" />
+    </div>
+  );
+
   return (
     <div className="container fade-in" style={{ padding: "60px 24px" }}>
       <div style={{ textAlign: "center", marginBottom: "40px" }}>
@@ -28,7 +64,7 @@ export default function PromptsLibrary() {
       <div style={{ maxWidth: "700px", margin: "0 auto 40px auto" }}>
         <ReAnchor 
           title="How to use these prompts"
-          message="First open antigravity.google and enter a project. Then find one of the prompt templates below, click 'Copy Prompt', and paste it in the chat workspace. Watch the AI agent build it instantly!"
+          message="First open your project folder in the Antigravity IDE. Then copy one of the prompt templates below, paste it into the workspace chat box on the left, and watch the builder create it instantly!"
         />
       </div>
 
@@ -88,34 +124,48 @@ export default function PromptsLibrary() {
         </div>
       </div>
 
-      {/* Prompts list */}
-      <div style={{ display: "flex", flexDirection: "column", gap: "32px", maxWidth: "750px", margin: "0 auto" }}>
-        {filteredPrompts.map((p, idx) => (
-          <div key={idx} style={{ 
-            background: "white", 
-            padding: "24px", 
-            borderRadius: "var(--radius-lg)", 
-            border: "1px solid rgba(78, 110, 88, 0.08)",
-            boxShadow: "var(--shadow-sm)"
-          }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px" }}>
-              <div>
-                <h3 style={{ margin: 0, fontSize: "1.3rem" }}>{p.title}</h3>
-                <p style={{ margin: "4px 0 0 0", fontSize: "0.95rem", color: "var(--text-muted)" }}>{p.description}</p>
-              </div>
-              <div style={{ display: "flex", gap: "8px" }}>
-                <span className="badge badge-beginner" style={{ fontSize: "0.7rem" }}>
-                  {p.difficulty}
-                </span>
-                <span className="badge badge-tool" style={{ fontSize: "0.7rem" }}>
-                  {p.category}
-                </span>
-              </div>
+      {/* Prompts list separated by Simple and Advanced */}
+      <div style={{ display: "flex", flexDirection: "column", gap: "48px", maxWidth: "750px", margin: "0 auto" }}>
+        
+        {/* Simple Prompts Section */}
+        {simplePrompts.length > 0 && (
+          <div>
+            <div style={{ 
+              display: "flex", 
+              alignItems: "center", 
+              gap: "10px", 
+              marginBottom: "20px", 
+              borderBottom: "2px solid var(--color-sage-light)", 
+              paddingBottom: "10px" 
+            }}>
+              <span style={{ fontSize: "1.4rem" }}>🌱</span>
+              <h2 style={{ margin: 0, fontSize: "1.35rem", color: "var(--color-sage)" }}>Simple Prompts (Short & Sweet Templates)</h2>
             </div>
-            
-            <PromptBlock promptText={p.promptText} label="Prompt Description" />
+            <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+              {simplePrompts.map((p, idx) => renderPromptCard(p, idx))}
+            </div>
           </div>
-        ))}
+        )}
+
+        {/* Advanced Prompts Section */}
+        {advancedPrompts.length > 0 && (
+          <div>
+            <div style={{ 
+              display: "flex", 
+              alignItems: "center", 
+              gap: "10px", 
+              marginBottom: "20px", 
+              borderBottom: "2px solid #fbf3f0", 
+              paddingBottom: "10px" 
+            }}>
+              <span style={{ fontSize: "1.4rem" }}>🚀</span>
+              <h2 style={{ margin: 0, fontSize: "1.35rem", color: "var(--color-terracotta)" }}>Advanced Prompts (Detailed 3-Part Blueprints)</h2>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+              {advancedPrompts.map((p, idx) => renderPromptCard(p, idx))}
+            </div>
+          </div>
+        )}
 
         {filteredPrompts.length === 0 && (
           <div className="empty-state">
