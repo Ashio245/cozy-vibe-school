@@ -246,7 +246,7 @@ export const lessons = [
     difficulty: "Advanced",
     estimatedMinutes: 8,
     prompt: null,
-    nextSlug: null,
+    nextSlug: "lesson-9-launching-to-the-world",
     introText: "Building apps with AI is fast and fun, but it comes with responsibilities. Let's cover key safety guidelines.",
     interactiveType: "checklist",
     sections: [
@@ -274,6 +274,54 @@ export const lessons = [
         title: "Your Vibe Coding Safety Pledge",
         paragraphs: [
           "Before graduating, check off the key security and caution practices below to show you're ready to build safe, secure applications in the real world!"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "lesson-9-launching-to-the-world",
+    title: "Lesson 9: Launching to the World",
+    description: "Learn the simplest possible way to publish your project using GitHub and Vercel, and paste your final links to graduate.",
+    category: "advanced",
+    order: 9,
+    difficulty: "Advanced",
+    estimatedMinutes: 12,
+    prompt: null,
+    nextSlug: null,
+    introText: "Right now, your custom website only exists on your computer. Let's make it live on the web so anyone with a phone or computer can visit it!",
+    interactiveType: "deploy-project",
+    sections: [
+      {
+        title: "What are GitHub and Vercel?",
+        paragraphs: [
+          "To put a website on the internet, you need two simple accounts:",
+          "1. GitHub: Think of this like Google Drive or Dropbox, but built specifically for project folders. It is a free website that saves your folder safely in the cloud so other services can read it.",
+          "2. Vercel: This is a publishing service. It takes your files from GitHub and turns them into a real, live link (like a phone number for your website) that anybody can visit."
+        ]
+      },
+      {
+        title: "Step 1: Save Your Folder to GitHub (The Cloud Locker)",
+        paragraphs: [
+          "First, we need to upload your project folder to the cloud. You don't need any complex command-line tool. There are two simple ways to do it:",
+          "• The Chat Way (Easiest): Open your project folder in the Antigravity IDE. Type in the chat box on the left: 'Create a new GitHub repository for this project and upload my files.' Antigravity will pop up a window asking you to authorize your GitHub account, and then upload all files automatically!",
+          "• The Drag & Drop Way: If you prefer using your browser, go to github.com and sign up for a free account. Click the green 'New' button to create a folder locker (called a 'repository'). Give it a name like 'my-first-site', then simply drag and drop your project files directly from your computer into the website window to upload them!"
+        ]
+      },
+      {
+        title: "Step 2: Connect to Vercel (The Live Publisher)",
+        paragraphs: [
+          "Now that your files are in the cloud, let's publish them live to the web:",
+          "1. Go to vercel.com and sign up for a free Hobby account. Click 'Continue with GitHub' to login using the GitHub account you just made.",
+          "2. Once inside your Vercel Dashboard, click the 'Add New' button on the top right, and select 'Project'.",
+          "3. You will see your GitHub profile connected. Look at the list, find your repository (e.g. 'my-first-site'), and click the 'Import' button next to it.",
+          "4. Click the blue 'Deploy' button. Wait about 15 seconds while a tiny rocket animation loads. That's it! Vercel will give you a live link (like 'my-first-site.vercel.app') that you can copy and send to your friends!"
+        ]
+      },
+      {
+        title: "The Graduation Project: Publish Your Vibe App",
+        paragraphs: [
+          "To graduate from Vibe Coding School, create a new empty folder on your computer, open it in Antigravity, and vibe code any small app you want (e.g. a cozy timer, a daily journal, or a personal list).",
+          "Once you are happy with it, upload it to GitHub, deploy it to Vercel, and paste both links below to receive your graduation certificate!"
         ]
       }
     ]

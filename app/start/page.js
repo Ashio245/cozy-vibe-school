@@ -52,10 +52,10 @@ export default function StartFromZero() {
             </p>
             
             <ul className="reassurance-list">
-              <li>No developer frameworks or library installs.</li>
-              <li>No terminal, shell, or command line terminals.</li>
-              <li>No prior experience of any kind is required.</li>
-              <li>All you need is a Google Account and an internet connection.</li>
+              <li><span>No developer frameworks or complex setup tools.</span></li>
+              <li><span>No terminal commands or coding experience of any kind required.</span></li>
+              <li><span>You only need a Google account and a web browser to start.</span></li>
+              <li><span><strong>To publish your app live at the end:</strong> You will eventually create a free <strong>GitHub</strong> account and a free <strong>Vercel</strong> account. We will guide you through this step-by-step when the time comes!</span></li>
             </ul>
 
             <p style={{ margin: "16px 0 0 0", fontStyle: "italic", fontSize: "0.95rem" }}>

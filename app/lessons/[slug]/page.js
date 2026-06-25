@@ -14,6 +14,7 @@ import WorkspaceMockup from "@/components/WorkspaceMockup";
 import PromptPolish from "@/components/PromptPolish";
 import AiQuiz from "@/components/AiQuiz";
 import SafetyChecklist from "@/components/SafetyChecklist";
+import DeployProject from "@/components/DeployProject";
 
 export default function LessonPage() {
   const params = useParams();
@@ -98,6 +99,9 @@ export default function LessonPage() {
         )}
         {lesson.interactiveType === "checklist" && (
           <SafetyChecklist />
+        )}
+        {lesson.interactiveType === "deploy-project" && (
+          <DeployProject />
         )}
       </div>
 

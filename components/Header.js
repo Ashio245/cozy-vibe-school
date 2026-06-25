@@ -1,12 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isGraduate, setIsGraduate] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const checkGraduation = () => {
+      const data = localStorage.getItem("vibeSchoolGraduation");
+      setIsGraduate(!!data);
+    };
+
+    checkGraduation();
+
+    window.addEventListener("vibeSchoolGraduationChanged", checkGraduation);
+    return () => {
+      window.removeEventListener("vibeSchoolGraduationChanged", checkGraduation);
+    };
+  }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -25,6 +40,23 @@ export default function Header() {
       <div className="container header-container">
         <Link href="/" className="logo-link" onClick={closeMenu}>
           🌱 <span>Cozy Vibe School</span>
+          {isGraduate && (
+            <span style={{ 
+              fontSize: "0.75rem", 
+              backgroundColor: "#fbf3f0", 
+              color: "var(--color-terracotta)", 
+              padding: "2px 10px", 
+              borderRadius: "99px",
+              marginLeft: "8px",
+              fontFamily: "var(--font-family-heading)",
+              fontWeight: 700,
+              display: "inline-flex",
+              alignItems: "center",
+              border: "1px solid rgba(194, 65, 12, 0.15)"
+            }}>
+              🎓 Graduate
+            </span>
+          )}
         </Link>
 
         {/* Desktop Menu */}
