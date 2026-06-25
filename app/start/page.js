@@ -55,6 +55,7 @@ export default function StartFromZero() {
               <li><span>No developer frameworks or complex setup tools.</span></li>
               <li><span>No terminal commands or coding experience of any kind required.</span></li>
               <li><span>You only need a Google account and a web browser to start.</span></li>
+              <li><span><strong>For hands-on lessons (Lesson 2 onwards):</strong> You will need to download and install the <strong>Antigravity IDE</strong> application on your computer to open folders and edit files.</span></li>
               <li><span><strong>To publish your app live at the end:</strong> You will eventually create a free <strong>GitHub</strong> account and a free <strong>Vercel</strong> account. We will guide you through this step-by-step when the time comes!</span></li>
             </ul>
 

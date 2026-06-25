@@ -88,6 +88,13 @@ export default function LessonPage() {
             {lesson.slug === "lesson-0-your-first-vibe" && sIdx === 1 && (
               <VibeTextArea />
             )}
+
+            {/* Visual Workspace Mockup for Lesson 1 */}
+            {lesson.slug === "lesson-1-meet-antigravity" && sIdx === 1 && (
+              <div style={{ marginTop: "24px" }}>
+                <WorkspaceMockup />
+              </div>
+            )}
           </div>
         ))}
 
