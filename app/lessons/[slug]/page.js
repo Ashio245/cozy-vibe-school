@@ -54,7 +54,7 @@ export default function LessonPage() {
           ← Back to all lessons
         </Link>
         <span className={`badge ${isConcept ? "badge-concept" : isAdvanced ? "badge-advanced" : "badge-tool"}`}>
-          {isConcept ? "💡 Concept Lesson" : isAdvanced ? "🎯 Advanced Lesson" : "🛠️ Tool Lesson"}
+          {isConcept ? "💡 Concept" : isAdvanced ? "🎯 Pro Skills" : "🛠️ Hands-on"}
         </span>
       </div>
 

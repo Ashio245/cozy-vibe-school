@@ -8,7 +8,7 @@ export default function LessonCard({ lesson }) {
     <div className="card" style={{ display: "flex", flexDirection: "column", height: "100%" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
         <span className={`badge ${isConcept ? "badge-concept" : isAdvanced ? "badge-advanced" : "badge-tool"}`}>
-          {isConcept ? "💡 Concept Lesson" : isAdvanced ? "🎯 Advanced Lesson" : "🛠️ Tool Lesson"}
+          {isConcept ? "💡 Concept" : isAdvanced ? "🎯 Pro Skills" : "🛠️ Hands-on"}
         </span>
         <span className="badge badge-beginner">
           {lesson.difficulty || "Beginner"}
