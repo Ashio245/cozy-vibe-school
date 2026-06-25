@@ -42,7 +42,7 @@ export const lessons = [
       {
         title: "What is Antigravity?",
         paragraphs: [
-          "Antigravity is a special AI-powered IDE (Integrated Development Environment) created by Google. In fact, it is the very application you are using to view this school page right now! Instead of showing you a blank screen and thousands of lines of code, it provides a friendly chat box on the left, your files in the center, and a live preview on the right.",
+          "Antigravity is a special AI-powered IDE (Integrated Development Environment) created by Google. In fact, it is the very application you are using to view this school page right now! Instead of showing you a blank screen and thousands of lines of code, it provides a file tree on the left, an open code editor in the center, and a friendly Agent chat panel on the right.",
           "You talk to it just like a chat application. When you ask it to change something, you can watch it write code files on your computer and update the browser preview instantly."
         ]
       },
@@ -50,9 +50,9 @@ export const lessons = [
         title: "The Three Areas of Antigravity",
         paragraphs: [
           "Since you have Antigravity open, take a look at the three main sections of your editor window:",
-          "1. The Chat Area (Left): This is where you talk to the AI assistant. You type what you want to change, and read the assistant's updates.",
-          "2. The Files Area (Center): This shows the folder on your computer. The AI assistant creates and modifies these files for you. You don't need to write them yourself, but it's neat to watch them change!",
-          "3. The Preview Area (Right): This is your live app. As soon as the assistant makes a file change, the preview refreshes to show the changes immediately (just like how you are reading this course on the preview side!)."
+          "1. The Files Explorer (Left): This shows the files and folders in your project folder, so you can see what the builder is working on.",
+          "2. The Code Editor (Center): This is where the AI assistant creates and modifies the files for you. You don't need to write the code yourself, but it's neat to watch the code appear in the center!",
+          "3. The Agent Panel (Right): This is where you talk to the AI assistant. You type what you want to build or change, and read the assistant's updates as it works."
         ]
       }
     ]
@@ -79,7 +79,7 @@ export const lessons = [
       {
         title: "Step 2: Copy your first Vibe Prompt",
         paragraphs: [
-          "Below is a pre-written prompt. It describes a tea cafe website in simple words. Copy this prompt using the button below, then paste it directly into your Antigravity chat box on the left and hit Enter!"
+          "Below is a pre-written prompt. It describes a tea cafe website in simple words. Copy this prompt using the button below, then paste it directly into the Antigravity Agent chat panel on the right and hit Enter!"
         ]
       },
       {
@@ -350,7 +350,7 @@ export const lessons = [
         title: "Step 1: Save Your Folder to GitHub (The Cloud Locker)",
         paragraphs: [
           "First, we need to upload your project folder to the cloud. You don't need any complex command-line tool. There are two simple ways to do it:",
-          "• The Chat Way (Easiest): Open your project folder in the Antigravity IDE. Type in the chat box on the left: 'Create a new GitHub repository for this project and upload my files.' Antigravity will pop up a window asking you to authorize your GitHub account, and then upload all files automatically!",
+          "• The Chat Way (Easiest): Open your project folder in the Antigravity IDE. Type in the Agent chat panel on the right: 'Create a new GitHub repository for this project and upload my files.' Antigravity will pop up a window asking you to authorize your GitHub account, and then upload all files automatically!",
           "• The Drag & Drop Way: If you prefer using your browser, go to github.com and sign up for a free account. Click the green 'New' button to create a folder locker (called a 'repository'). Give it a name like 'my-first-site', then simply drag and drop your project files directly from your computer into the website window to upload them!"
         ]
       },

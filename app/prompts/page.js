@@ -64,7 +64,7 @@ export default function PromptsLibrary() {
       <div style={{ maxWidth: "700px", margin: "0 auto 40px auto" }}>
         <ReAnchor 
           title="How to use these prompts"
-          message="First open your project folder in the Antigravity IDE. Then copy one of the prompt templates below, paste it into the workspace chat box on the left, and watch the builder create it instantly!"
+          message="First open your project folder in the Antigravity IDE. Then copy one of the prompt templates below, paste it into the workspace chat box in the Agent panel on the right, and watch the builder create it instantly!"
         />
       </div>
 

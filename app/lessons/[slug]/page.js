@@ -2,6 +2,7 @@
 
 import { use } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import { getLessonBySlug } from "@/data/lessons";
 import { useProgress } from "@/hooks/useProgress";
@@ -9,8 +10,6 @@ import ReAnchor from "@/components/ReAnchor";
 import PromptBlock from "@/components/PromptBlock";
 import VibeTextArea from "@/components/VibeTextArea";
 import StepCard from "@/components/StepCard";
-import DashboardMockup from "@/components/DashboardMockup";
-import WorkspaceMockup from "@/components/WorkspaceMockup";
 import PromptPolish from "@/components/PromptPolish";
 import AiQuiz from "@/components/AiQuiz";
 import SafetyChecklist from "@/components/SafetyChecklist";
@@ -89,10 +88,26 @@ export default function LessonPage() {
               <VibeTextArea />
             )}
 
-            {/* Visual Workspace Mockup for Lesson 1 */}
+            {/* Real Antigravity IDE screenshot for Lesson 1 */}
             {lesson.slug === "lesson-1-meet-antigravity" && sIdx === 1 && (
               <div style={{ marginTop: "24px" }}>
-                <WorkspaceMockup />
+                <div style={{
+                  borderRadius: "12px",
+                  overflow: "hidden",
+                  border: "1px solid rgba(78, 110, 88, 0.12)",
+                  boxShadow: "var(--shadow-md)"
+                }}>
+                  <Image
+                    src="/screenshots/antigravity-ide-workspace.png"
+                    alt="Antigravity IDE interface showing the project files explorer, the open code editor, the terminal running the dev server, and the Agent chat panel on the right"
+                    width={1200}
+                    height={700}
+                    style={{ width: "100%", height: "auto", display: "block" }}
+                  />
+                </div>
+                <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", textAlign: "center", marginTop: "12px", fontStyle: "italic" }}>
+                  📸 Actual screenshot of the Antigravity IDE workspace window showing the editor and Agent chat panel.
+                </p>
               </div>
             )}
           </div>
@@ -124,20 +139,26 @@ export default function LessonPage() {
 
           <StepCard number="1" title="Open Your Workspace Folder">
             <p style={{ margin: 0 }}>
-              Go to <span className="url-box">antigravity.google</span>. Since you've used the tool before, select <strong>Open Folder</strong> and choose the folder you created on your computer for this project. Antigravity will load the files directly from your system.
+              Open the <span className="url-box">Antigravity IDE</span> application. Since you've used the tool before, select <strong>Open Folder</strong> and choose the folder you created on your computer for this project. The IDE will load the files directly from your system.
             </p>
-            <div style={{ marginTop: "16px" }}>
-              <DashboardMockup />
+            <div style={{ marginTop: "16px", borderRadius: "12px", overflow: "hidden", border: "1px solid rgba(78, 110, 88, 0.12)", boxShadow: "var(--shadow-sm)" }}>
+              <Image
+                src="/screenshots/antigravity-ide-workspace.png"
+                alt="Antigravity IDE workspace showing the project files explorer, the open code editor, the terminal running the dev server, and the Agent panel"
+                width={1200}
+                height={700}
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
             </div>
+            <p style={{ fontSize: "0.8rem", color: "var(--text-muted)", textAlign: "center", marginTop: "8px", fontStyle: "italic" }}>
+              📸 The Antigravity IDE workspace — showing the files explorer, editor, terminal, and Agent chat panel.
+            </p>
           </StepCard>
 
           <StepCard number="2" title="Paste the Prompt in the Chat Box">
             <p style={{ margin: 0 }}>
-              Once your project folder is open, find the chat panel on the left. Copy the vibe prompt recipe from the card below, paste it into the chat input, and hit send. Watch the builder modify your files and update your site automatically.
+              Once your project folder is open, find the Agent chat panel on the right. Copy the vibe prompt recipe from the card below, paste it into the chat input, and hit send. Watch the builder modify your files and update your site automatically.
             </p>
-            <div style={{ marginTop: "16px" }}>
-              <WorkspaceMockup />
-            </div>
           </StepCard>
 
           <StepCard number="3" title="Test in the Preview Panel">

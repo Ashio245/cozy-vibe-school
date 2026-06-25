@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function StartFromZero() {
   return (
@@ -34,10 +35,38 @@ export default function StartFromZero() {
           <div className="onboarding-box">
             <h2 style={{ marginTop: 0, marginBottom: "16px" }}>What is Antigravity?</h2>
             <p>
-              Antigravity is the friendly AI-powered IDE (Integrated Development Environment) created by Google that you are using right now to preview this application! It provides a chat interface on the left, a file viewer in the center, and a live browser preview on the right.
+              Antigravity is the friendly AI-powered IDE (Integrated Development Environment) created by Google. It provides a chat interface where you type what you want, a code editor in the center, and a live browser preview on the right.
             </p>
             <p>
               You type in descriptions, and Antigravity edits files on your computer and updates the live preview for you automatically. You never need to deal with files, templates, or coding commands.
+            </p>
+
+            {/* Real screenshot of Antigravity 2.0 */}
+            <div style={{ marginTop: "20px", borderRadius: "12px", overflow: "hidden", border: "1px solid rgba(78, 110, 88, 0.12)", boxShadow: "0 4px 16px rgba(0,0,0,0.06)" }}>
+              <Image
+                src="/screenshots/antigravity-hero.png"
+                alt="Google Antigravity 2.0 product page — your dedicated platform to work with agents, with a Download button"
+                width={1200}
+                height={700}
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+            </div>
+            <p style={{ fontSize: "0.8rem", color: "var(--text-muted)", textAlign: "center", marginTop: "10px", fontStyle: "italic" }}>
+              📸 Google Antigravity 2.0 — download it from <a href="https://antigravity.google" target="_blank" rel="noopener noreferrer" style={{ color: "var(--color-sage)", fontWeight: 600 }}>antigravity.google</a>
+            </p>
+
+            {/* Antigravity chat interface */}
+            <div style={{ marginTop: "20px", borderRadius: "12px", overflow: "hidden", border: "1px solid rgba(78, 110, 88, 0.12)", boxShadow: "0 4px 16px rgba(0,0,0,0.06)" }}>
+              <Image
+                src="/screenshots/antigravity-ide-workspace.png"
+                alt="Antigravity IDE workspace showing the project files explorer, the open code editor, the terminal running the dev server, and the Agent panel for chatting with the AI builder"
+                width={1200}
+                height={700}
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+            </div>
+            <p style={{ fontSize: "0.8rem", color: "var(--text-muted)", textAlign: "center", marginTop: "10px", fontStyle: "italic" }}>
+              📸 The Antigravity IDE workspace — your file explorer, code editor, terminal, and Agent chat panel are all in one place.
             </p>
           </div>
         </div>
