@@ -30,7 +30,7 @@ export const lessons = [
   {
     slug: "lesson-1-meet-antigravity",
     title: "Lesson 1: Meet Antigravity",
-    description: "Discover the friendly Google AI tool where you chat to build websites and web apps.",
+    description: "Discover the friendly Google AI IDE where you chat to build websites and web apps.",
     category: "concept",
     order: 1,
     difficulty: "Beginner",
@@ -42,17 +42,17 @@ export const lessons = [
       {
         title: "What is Antigravity?",
         paragraphs: [
-          "Antigravity is a special workspace created by Google. Instead of showing you a blank screen and thousands of lines of code, it shows you a friendly chat box.",
-          "You talk to it just like a chat application, and on the right side of the screen, you see your website appear instantly. When you ask it to change something, you can watch it edit the files and update the preview live."
+          "Antigravity is a special AI-powered IDE (Integrated Development Environment) created by Google. In fact, it is the very application you are using to view this school page right now! Instead of showing you a blank screen and thousands of lines of code, it provides a friendly chat box on the left, your files in the center, and a live preview on the right.",
+          "You talk to it just like a chat application. When you ask it to change something, you can watch it write code files on your computer and update the browser preview instantly."
         ]
       },
       {
         title: "The Three Areas of Antigravity",
         paragraphs: [
-          "When you open Antigravity, there are three main sections to keep an eye on:",
-          "1. The Chat Area (Left): This is where you talk to the AI agent. You type what you want to change, and read the agent's friendly updates.",
-          "2. The Files Area (Center): This is where the files are stored. The AI agent creates and changes them for you. You don't need to edit them yourself, but it's neat to watch them change!",
-          "3. The Preview Area (Right): This is your live website. As soon as the AI agent makes a change, the website refreshes to show the changes immediately."
+          "Since you have Antigravity open, take a look at the three main sections of your editor window:",
+          "1. The Chat Area (Left): This is where you talk to the AI assistant. You type what you want to change, and read the assistant's updates.",
+          "2. The Files Area (Center): This shows the folder on your computer. The AI assistant creates and modifies these files for you. You don't need to write them yourself, but it's neat to watch them change!",
+          "3. The Preview Area (Right): This is your live app. As soon as the assistant makes a file change, the preview refreshes to show the changes immediately (just like how you are reading this course on the preview side!)."
         ]
       }
     ]
@@ -67,13 +67,13 @@ export const lessons = [
     estimatedMinutes: 10,
     prompt: "Create a simple single-page website for a cozy tea cafe called 'Sip & Read'. It should have a warm peach background, a header that says 'Sip & Read', a list of three signature teas with description and prices, and a friendly welcome note. Use soft, friendly font styles.",
     nextSlug: "lesson-3-making-changes",
-    introText: "Let's put our knowledge to the test! Go ahead and open your Antigravity workspace to build a cozy cafe page.",
+    introText: "Let's put our knowledge to the test! Go ahead and open a folder inside your Antigravity IDE to build a cozy cafe page.",
     sections: [
       {
-        title: "Step 1: Open Antigravity",
+        title: "Step 1: Open Your Folder in Antigravity",
         paragraphs: [
-          "By now, you've seen what Antigravity is. Head over to antigravity.google. You should see your dashboard. Simply click 'New Project' to spin up your private builder workspace.",
-          "Take a quick second to look at the three columns (chat on the left, file tree in the middle, and browser preview on the right) which we discussed in the previous lesson."
+          "In your Antigravity IDE, select the 'Open Folder' button. Pick an empty folder on your computer that you created for this cafe project (e.g. named `sip-and-read`).",
+          "Once selected, you'll see the three workspace columns active and pointing to your empty folder, ready to start."
         ]
       },
       {
@@ -85,7 +85,7 @@ export const lessons = [
       {
         title: "Step 3: Watch it build!",
         paragraphs: [
-          "Watch as the AI agent begins modifying files in the center column. You'll see the Sip & Read cafe website load in your preview window on the right within a few seconds!"
+          "The AI assistant will start writing files (like `index.html` and `styles.css`) directly inside your folder. You'll see the Sip & Read cafe website load in your preview window on the right within a few seconds!"
         ]
       }
     ]
@@ -105,7 +105,7 @@ export const lessons = [
       {
         title: "Tweaking Your Active Project",
         paragraphs: [
-          "Since your project is already open in Antigravity, making changes is as simple as chatting with the AI agent. You don't need to dive into any code files.",
+          "Since your project folder is already open in the Antigravity IDE, making changes is as simple as chatting with the AI assistant. You don't need to edit any code files directly.",
           "Let's add a calming chamomile tea and change the background to a lovely sage green. Copy the prompt below, paste it into your active project's chat box, and hit send!"
         ]
       }
@@ -127,7 +127,7 @@ export const lessons = [
         title: "Adding Logic to Your Project",
         paragraphs: [
           "In traditional programming, making things interactive requires writing Javascript. In vibe coding, you just describe the behavior you want.",
-          "We will ask the agent to add a button that reveals a random recipe when clicked. Copy the prompt below, paste it in your active Antigravity workspace chat, and test the button in the preview window on the right!"
+          "We will ask the assistant to add a button that reveals a random recipe when clicked. Copy the prompt below, paste it in your active Antigravity workspace chat, and test the button in the preview window on the right!"
         ]
       }
     ]
@@ -147,7 +147,7 @@ export const lessons = [
       {
         title: "Starting Leafy Log",
         paragraphs: [
-          "In this final lesson, you will build a plant tracking app. Go back to your Antigravity dashboard, click 'New Project', and paste this graduation prompt in your new workspace.",
+          "In this final lesson, you will build a plant tracking app. In your Antigravity IDE, open a brand new empty folder on your computer named `leafy-log` and paste this graduation prompt in the chat.",
           "You'll create an interactive database-like tracker for watering house plants. Once the builder is finished, test it out and feel free to ask for extra tweaks like dark mode!"
         ]
       }

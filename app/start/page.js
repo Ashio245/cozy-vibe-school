@@ -34,10 +34,10 @@ export default function StartFromZero() {
           <div className="onboarding-box">
             <h2 style={{ marginTop: 0, marginBottom: "16px" }}>What is Antigravity?</h2>
             <p>
-              Antigravity is a friendly app builder created by Google. When you open it, you see a clean dashboard with a chat interface on the left and a live preview of your application on the right.
+              Antigravity is the friendly AI-powered IDE (Integrated Development Environment) created by Google that you are using right now to preview this application! It provides a chat interface on the left, a file viewer in the center, and a live browser preview on the right.
             </p>
             <p>
-              You type in descriptions, and Antigravity writes the files, sets up folders, and runs the website for you automatically. You never need to deal with files, templates, or setup commands.
+              You type in descriptions, and Antigravity edits files on your computer and updates the live preview for you automatically. You never need to deal with files, templates, or coding commands.
             </p>
           </div>
         </div>

@@ -9,15 +9,15 @@ export default function AboutPage() {
     },
     {
       q: "Do I have to install anything on my computer?",
-      a: "No installations are required! Antigravity runs entirely inside your web browser. You don't need to configure compile environments, servers, or install files onto your desktop. You just visit antigravity.google and start building."
+      a: "To use Antigravity, you run the Antigravity IDE application (the workspace you are using right now!). It runs locally on your computer, meaning you don't have to install or configure programming languages, local servers, or write code files yourself. You just select a folder and let your AI assistant handle the work."
     },
     {
       q: "What exactly is Antigravity?",
-      a: "Antigravity is a friendly app builder workspace made by Google. In it, you chat with helpful AI agents. You tell the agent what you want, and the agent builds the code, compiles the files, and displays a live preview of the working application right next to the chat window."
+      a: "Antigravity is the AI-powered IDE (Integrated Development Environment) you are currently using to view this school page. In it, you chat with helpful AI assistants. You tell the assistant what you want, and it builds the code, compiles the files in your selected folder, and displays a live preview of the working application right next to your chat panel."
     },
     {
       q: "Is vibe coding safe for absolute beginners?",
-      a: "Yes! There are no ways to break anything. If the layout looks wrong or an error appears, you don't have to search for hours to fix it. You just type in the chat: 'The layout broke, please fix it' or 'Can we put the text back to normal?' and the agent fixes it instantly."
+      a: "Yes! There are no ways to break anything. If the layout looks wrong or an error appears, you don't have to search for hours to fix it. You just type in the chat: 'The layout broke, please fix it' or 'Can we put the text back to normal?' and the assistant fixes it instantly."
     },
     {
       q: "Can I build real applications?",
@@ -37,7 +37,7 @@ export default function AboutPage() {
       {/* Anchor reminder */}
       <ReAnchor 
         title="What is Vibe Coding & Antigravity?"
-        message="Vibe coding is the act of building applications by describing them in plain language. Antigravity is a browser-based builder workspace by Google that reads your descriptions and builds the software for you automatically."
+        message="Vibe coding is the act of building applications by describing them in plain language. Antigravity is the AI-powered IDE you are using right now that reads your descriptions and builds the software inside local folders automatically."
       />
 
       {/* FAQs */}
@@ -76,13 +76,13 @@ export default function AboutPage() {
           <div>
             <strong>IDE / Workspace:</strong> 
             <span style={{ display: "block", fontSize: "0.9rem", color: "var(--text-muted)", marginTop: "4px" }}>
-              A developer term for the screen where files are edited. In Antigravity, it's just the page where you chat and watch your app appear.
+              Integrated Development Environment. It is the application you are currently using to build and preview this project. In Antigravity, it is a single screen where you chat with the AI assistant, see file list updates, and interact with the live browser preview.
             </span>
           </div>
           <div style={{ borderTop: "1px solid rgba(78, 110, 88, 0.1)", paddingTop: "12px" }}>
-            <strong>AI Agent:</strong> 
+            <strong>AI Assistant / Agent:</strong> 
             <span style={{ display: "block", fontSize: "0.9rem", color: "var(--text-muted)", marginTop: "4px" }}>
-              A friendly helper. It is like an AI assistant that knows how to build websites, listen to your chat updates, and write the files for you.
+              A friendly helper. It is like an AI assistant that knows how to build websites, listen to your chat updates, and write the files directly into your selected folder.
             </span>
           </div>
           <div style={{ borderTop: "1px solid rgba(78, 110, 88, 0.1)", paddingTop: "12px" }}>
