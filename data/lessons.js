@@ -246,7 +246,7 @@ export const lessons = [
     difficulty: "Advanced",
     estimatedMinutes: 8,
     prompt: null,
-    nextSlug: "lesson-9-launching-to-the-world",
+    nextSlug: "lesson-9-rate-limits-and-credits",
     introText: "Building apps with AI is fast and fun, but it comes with responsibilities. Let's cover key safety guidelines.",
     interactiveType: "checklist",
     sections: [
@@ -279,11 +279,58 @@ export const lessons = [
     ]
   },
   {
-    slug: "lesson-9-launching-to-the-world",
-    title: "Lesson 9: Launching to the World",
-    description: "Learn the simplest possible way to publish your project using GitHub and Vercel, and paste your final links to graduate.",
+    slug: "lesson-9-rate-limits-and-credits",
+    title: "Lesson 9: Rate Limits & Credits",
+    description: "Learn about message limits, why they exist to keep the service free, and what to do when you run out of credits.",
     category: "advanced",
     order: 9,
+    difficulty: "Advanced",
+    estimatedMinutes: 6,
+    prompt: null,
+    nextSlug: "lesson-10-launching-to-the-world",
+    introText: "AI builders take a lot of server brainpower. Let's understand rate limits, credit limits, and how to pace your building sessions.",
+    interactiveType: "cooldown-simulator",
+    sections: [
+      {
+        title: "Why is there a Limit?",
+        paragraphs: [
+          "When you type a prompt in Antigravity, a large AI model reads your description, updates several files, and compiles the project. This process takes a massive amount of computing power.",
+          "To keep the service fast, reliable, and completely free for everyone, Google has hourly and daily limit safety valves (known as 'Rate Limits' or 'Quotas')."
+        ]
+      },
+      {
+        title: "What if You See a 'Limit Reached' Error?",
+        paragraphs: [
+          "If you write many prompts in a short period, you might see a message saying: 'You have reached your limit' or 'Out of free credits.'",
+          "When this happens: **Don't panic, and you don't need to pay anything.** The service is free. The simplest solution is to **just wait**. Quota limits reset automatically, usually within an hour or at midnight. Let it rest, grab a cup of tea, and come back fresh!"
+        ]
+      },
+      {
+        title: "How to Check Your Current Quota Limit",
+        paragraphs: [
+          "If you want to see exactly how many credits you have left or find out when your limits refresh, you can check your quota within the settings:",
+          "1. Look at the top right corner of the Antigravity IDE application window and click on the **Gear Settings icon ⚙️**.",
+          "2. From the dropdown menu, select **Open Antigravity IDE User Settings**.",
+          "3. In the settings tab that opens, select **Models** from the left-hand menu. Here, you'll see a list of active AI Models, your remaining quota progress bars, and exactly when they will refresh!"
+        ]
+      },
+      {
+        title: "Tips to Save Your Credits",
+        paragraphs: [
+          "To make your credits last longer, follow these smart prompting habits:",
+          "• Group Your Requests: Instead of sending 5 single messages for small changes, combine them. Say: 'Make the title brown, increase the font size, and add a bottom margin.'",
+          "• Check the Preview: Before sending your next request, test the live preview first to verify what actually needs changing.",
+          "• Take it Step-by-Step: Plan your steps in a notebook or simple text file so you don't waste edits backtracking."
+        ]
+      }
+    ]
+  },
+  {
+    slug: "lesson-10-launching-to-the-world",
+    title: "Lesson 10: Launching to the World",
+    description: "Learn the simplest possible way to publish your project using GitHub and Vercel, and paste your final links to graduate.",
+    category: "advanced",
+    order: 10,
     difficulty: "Advanced",
     estimatedMinutes: 12,
     prompt: null,
