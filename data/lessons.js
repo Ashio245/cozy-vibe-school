@@ -336,7 +336,7 @@ export const lessons = [
     difficulty: "Advanced",
     estimatedMinutes: 12,
     prompt: null,
-    nextSlug: null,
+    nextSlug: "lesson-11-opencode-terminal-alternative",
     introText: "Right now, your custom website only exists on your computer. Let's make it live on the web so anyone with a phone or computer can visit it!",
     interactiveType: "deploy-project",
     sections: [
@@ -371,6 +371,71 @@ export const lessons = [
         paragraphs: [
           "To graduate from Vibe Coding School, create a new empty folder on your computer, open it in Antigravity, and vibe code any small app you want (e.g. a cozy timer, a daily journal, or a personal list).",
           "Once you are happy with it, upload it to GitHub, deploy it to Vercel, and paste both links below to receive your graduation certificate!"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "lesson-11-opencode-terminal-alternative",
+    title: "Bonus: OpenCode — A Terminal Alternative",
+    description: "Discover OpenCode, a free terminal-based AI coding agent you can use instead of (or alongside) Antigravity.",
+    category: "advanced",
+    order: 11,
+    difficulty: "Advanced",
+    estimatedMinutes: 8,
+    prompt: null,
+    nextSlug: null,
+    introText: "You have been using Antigravity to build apps. But there is another popular free tool called OpenCode that works right inside your computer's terminal. Let's take a gentle look at it.",
+    interactiveType: "terminal-mockup",
+    sections: [
+      {
+        title: "What is OpenCode?",
+        paragraphs: [
+          "OpenCode is a free, open-source AI coding agent that runs inside your terminal (also called the command line). Instead of a visual window with buttons and panels like Antigravity, OpenCode opens a text-based interface right in your terminal app.",
+          "The core idea is exactly the same as Antigravity: you type what you want to build in plain English, and the AI writes the code for you. The only difference is where you type — a terminal window instead of a visual IDE.",
+          "⚠️ We kept this school focused on Antigravity because it has a friendlier visual interface for absolute beginners. OpenCode is a great next step once you're comfortable, or if you prefer working in the terminal."
+        ]
+      },
+      {
+        title: "Why try OpenCode?",
+        paragraphs: [
+          "There are a few reasons you might want to try OpenCode:",
+          "• It supports 75+ AI models — you can use Claude, GPT, Gemini, and even free local models running on your own computer.",
+          "• It has no built-in rate limits like Antigravity — your limits depend on which AI provider you connect (some have generous free tiers).",
+          "• It works entirely in the terminal, which feels faster once you get used to it.",
+          "• It's open-source, meaning it's completely free and community-driven."
+        ]
+      },
+      {
+        title: "Getting Started: 3 Simple Steps",
+        paragraphs: [
+          "Setting up OpenCode is simpler than it looks. You only need to do three things: install it, navigate to your project folder, and launch it. Try the interactive terminal below to see exactly what each command looks like!"
+        ]
+      },
+      {
+        title: "Using OpenCode After It Launches",
+        paragraphs: [
+          "Once OpenCode's terminal interface (called a TUI) opens, you will see a text input area. Just type your vibe prompt — exactly the same way you type in Antigravity's chat panel. For example:",
+          "'Create a simple single-page website for a cozy tea cafe called Sip & Read with a warm peach background and a list of three teas.'",
+          "OpenCode will read your project files, write or edit code, and show you what it changed. You can keep chatting with it to make tweaks, just like in Antigravity."
+        ]
+      },
+      {
+        title: "Configuring an AI Provider",
+        paragraphs: [
+          "OpenCode needs to know which AI model to use. The first time you run it, it will ask you to set up a provider. The easiest free options are:",
+          "• Google Gemini: Get a free API key from aistudio.google.com and paste it when prompted.",
+          "• Local models with Ollama: If you have Ollama installed, OpenCode can use models running on your own computer — completely free and private.",
+          "Don't worry about picking the perfect model. You can always change it later. Any of the options above will work great for vibe coding."
+        ]
+      },
+      {
+        title: "Antigravity vs. OpenCode — Quick Comparison",
+        paragraphs: [
+          "Both tools do the same thing: turn your plain-English descriptions into real code. Here's a simple comparison:",
+          "Antigravity: Visual IDE, click-and-chat, built-in preview, zero setup, but has strict rate limits and limited model choices.",
+          "OpenCode: Terminal-based, keyboard-driven, 75+ model choices, no built-in rate limits, but requires a small installation step and basic comfort with the terminal.",
+          "Our recommendation: start with Antigravity for the easiest experience, then try OpenCode when you want more flexibility or hit Antigravity's rate limits."
         ]
       }
     ]

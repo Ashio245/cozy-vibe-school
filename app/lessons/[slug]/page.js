@@ -15,6 +15,7 @@ import AiQuiz from "@/components/AiQuiz";
 import SafetyChecklist from "@/components/SafetyChecklist";
 import DeployProject from "@/components/DeployProject";
 import CooldownSimulator from "@/components/CooldownSimulator";
+import TerminalMockup from "@/components/TerminalMockup";
 
 export default function LessonPage() {
   const params = useParams();
@@ -128,6 +129,9 @@ export default function LessonPage() {
         )}
         {lesson.interactiveType === "cooldown-simulator" && (
           <CooldownSimulator />
+        )}
+        {lesson.interactiveType === "terminal-mockup" && (
+          <TerminalMockup />
         )}
       </div>
 
